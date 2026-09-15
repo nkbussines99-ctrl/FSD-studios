@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & Conditions — Word Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pine: #1b2c22;
+    --pine-deep: #12201a;
+    --gold: #b8863b;
+    --gold-bright: #d4a94f;
+    --parchment: #f4ecd8;
+    --parchment-dim: #ece1c8;
+    --ink: #2a2118;
+    --sage: #5c6b5a;
+    --rule: #d8c9a3;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Source Sans 3', -apple-system, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: var(--gold); text-decoration: underline; text-decoration-color: rgba(184,134,59,0.35); }
+  a:hover{ text-decoration-color: var(--gold); }
+  a:focus-visible, button:focus-visible{ outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+
+  header.hero{
+    background: linear-gradient(160deg, var(--pine) 0%, var(--pine-deep) 100%);
+    color: var(--parchment);
+    padding: 64px 24px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(circle at 18% 20%, rgba(212,169,79,0.10), transparent 40%),
+      radial-gradient(circle at 82% 78%, rgba(212,169,79,0.08), transparent 45%);
+    pointer-events:none;
+  }
+
+  .hero-inner{ max-width: 700px; margin: 0 auto; position: relative; }
+
+  .crest{ width: 44px; height: 44px; margin-bottom: 20px; opacity: 0.92; }
+
+  .eyebrow{
+    font-size: 0.82rem;
+    color: var(--gold-bright);
+    margin: 0 0 10px;
+    font-weight: 500;
+  }
+
+  h1{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 2.6rem;
+    line-height: 1.15;
+    margin: 0 0 14px;
+    color: #fbf6e9;
+  }
+
+  .hero-sub{ color: #c9d3c5; font-size: 1.02rem; max-width: 48ch; margin: 0; }
+
+  .meta-row{
+    margin-top: 28px;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 0.88rem;
+    color: #b7c2b1;
+  }
+  .meta-row strong{ color: var(--gold-bright); font-weight: 600; }
+
+  main{ max-width: 700px; margin: 0 auto; padding: 48px 24px 100px; }
+
+  .intro{ font-size: 1.08rem; color: #40372a; margin-bottom: 40px; }
+
+  .toc{
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin-bottom: 48px;
+    background: rgba(255,255,255,0.35);
+  }
+  .toc-title{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 10px;
+    color: var(--pine);
+  }
+  .toc ol{ margin: 0; padding-left: 1.25em; font-size: 0.94rem; }
+  .toc li{ margin-bottom: 6px; }
+  .toc a{ color: var(--ink); text-decoration: none; }
+  .toc a:hover{ color: var(--gold); text-decoration: underline; }
+
+  section{ margin-bottom: 40px; }
+
+  .divider{ display:flex; align-items:center; gap: 14px; margin: 0 0 20px; }
+  .divider svg{ flex-shrink:0; color: var(--gold); opacity: 0.85; }
+  .divider .line{ height:1px; flex:1; background: linear-gradient(to right, var(--rule), transparent); }
+
+  h2{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--pine);
+    scroll-margin-top: 24px;
+  }
+
+  h3{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.12rem;
+    color: var(--pine);
+    margin: 20px 0 8px;
+  }
+
+  p{ margin: 0 0 14px; color: #3a3122; }
+  ul{ margin: 0 0 14px; padding-left: 1.35em; }
+  li{ margin-bottom: 8px; color: #3a3122; }
+
+  .card{
+    background: rgba(255,255,255,0.4);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 18px 20px;
+    margin: 16px 0;
+  }
+  .card p:last-child{ margin-bottom: 0; }
+
+  .contact-block{
+    background: var(--pine);
+    color: var(--parchment);
+    border-radius: 6px;
+    padding: 28px 26px;
+    margin-top: 48px;
+  }
+  .contact-block h2{ color: #fbf6e9; margin-bottom: 10px; }
+  .contact-block p{ color: #cfd8c9; margin-bottom: 6px; }
+  .contact-block a{ color: var(--gold-bright); }
+
+  footer{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+    color: var(--sage);
+    font-size: 0.84rem;
+    text-align: center;
+  }
+  footer a{ color: var(--sage); }
+
+  @media (max-width: 480px){
+    header.hero{ padding: 48px 20px 44px; }
+    h1{ font-size: 2.05rem; }
+    main{ padding: 36px 20px 80px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <svg class="crest" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M24 4L42 13V24C42 34 34 41 24 44C14 41 6 34 6 24V13L24 4Z" stroke="#d4a94f" stroke-width="1.6"/>
+      <path d="M17 24L22 29L32 18" stroke="#d4a94f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <p class="eyebrow">Word Explorer</p>
+    <h1>Terms &amp; Conditions</h1>
+    <p class="hero-sub">The ground rules for playing Word Explorer — written to be read, not just filed away.</p>
+    <div class="meta-row">
+      <span><strong>Effective</strong> September 14, 2026</span>
+      <span><strong>Developer</strong> FSD Studio</span>
+      <span><strong>Contact</strong> nkbussines99@gmail.com</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <p class="intro">By downloading, installing, or playing Word Explorer, you agree to these terms. If you don't agree, please don't use the app. These terms apply to everyone who plays, since Word Explorer has no account or sign-in.</p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-title">On this page</p>
+    <ol>
+      <li><a href="#license">The license we give you</a></li>
+      <li><a href="#your-conduct">Playing fair</a></li>
+      <li><a href="#purchases">Coins, gems &amp; purchases</a></li>
+      <li><a href="#ownership">Who owns what</a></li>
+      <li><a href="#no-account-terms">No account, your device, your risk</a></li>
+      <li><a href="#availability">Availability &amp; changes to the game</a></li>
+      <li><a href="#disclaimer">No warranties</a></li>
+      <li><a href="#liability">Limits on our liability</a></li>
+      <li><a href="#termination">Ending your use</a></li>
+      <li><a href="#changes-terms">Changes to these terms</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </nav>
+
+  <section id="license">
+    <div class="divider"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg><div class="line"></div></div>
+    <h2>The license we give you</h2>
+    <p>FSD Studio grants you a personal, non-exclusive, non-transferable, revocable licence to install and play Word Explorer on devices you own or control, for your own personal entertainment. This licence doesn't give you any ownership of the app itself — only permission to use it.</p>
+    <p>You may not copy, decompile, reverse-engineer, resell, sublicense, or redistribute the app or any part of it, except where the law you're subject to gives you a right that can't be excluded by this agreement.</p>
+  </section>
+
+  <section id="your-conduct">
+    <div class="divider"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg><div class="line"></div></div>
+    <h2>Playing fair</h2>
+    <p>When using Word Explorer, you agree not to:</p>
+    <ul>
+      <li>Use cheats, bots, exploits, or modified versions of the app to gain an unfair advantage or unlock content without paying for it.</li>
+      <li>Attempt to interfere with the app's normal operation, or with other players' ability to use it.</li>
+      <li>Use the app for any unlawful purpose.</li>
+    </ul>
+  </section>
+
+  <section id="purchases">
+    <div class="divider"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg><div class="line"></div></div>
+    <h2>Coins, gems &amp; purchases</h2>
+    <p>Word Explorer may offer virtual currency (such as coins or gems) and optional purchases like removing ads. Virtual currency has no real-world monetary value, cannot be exchanged for cash, and cannot be transferred between devices or players.</p>
+    <p>All purchases are processed by the app store you downloaded Word Explorer from (Google Play or the App Store), and are subject to that store's own payment terms and refund policies — we don't process payments ourselves and can't issue refunds directly.</p>
+  </section>
+
+  <section id="ownership">
+    <div class="divider"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg><div class="line"></div></div>
+    <h2>Who owns what</h2>
+    <p>Word Explorer — including its artwork, puzzles, music, code, and the Word Explorer name — is the property of FSD Studio. Nothing in these terms transfers any of that ownership to you.</p>
+  </section>
+
+  <section id="no-account-terms">
+    <div class="divider"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg><div class="line"></div></div>
+    <h2>No account, your device, your risk</h2>
+    <p>Word Explorer doesn't use accounts or sign-in, so your progress is tied to the device you play on. If you uninstall the app, clear its data, or switch devices without a backup, your levels, coins, and gems may be lost permanently — we have no server copy to restore from.</p>
+  </section>
+
+  <section id="availability">
+    <div class="divider"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg><div class="line"></div></div>
+    <h2>Availability &amp; changes to the game</h2>
+    <p>We may update, change, or discontinue features of Word Explorer — including levels, rewards, and ad placements — at any time. We'll try to keep the app running smoothly, but we don't guarantee it will always be available, error-free, or compatible with every device.</p>
+  </section>
+
+  <section id="disclaimer">
+    <div class="divider"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg><div class="line"></div></div>
+    <h2>No warranties</h2>
+    <div class="card">
+      <p>Word Explorer is provided "as is" and "as available," without warranties of any kind, whether express or implied, including — to the extent permitted by law — warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+    </div>
+  </section>
+
+  <section id="liability">
+    <div class="divider"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg><div class="line"></div></div>
+    <h2>Limits on our liability</h2>
+    <p>To the fullest extent permitted by law, FSD Studio is not liable for any indirect, incidental, or consequential damages arising from your use of Word Explorer, including loss of game progress or virtual currency. Some jurisdictions don't allow these limitations, so parts of this section may not apply to you.</p>
+  </section>
+
+  <section id="termination">
+    <div class="divider"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg><div class="line"></div></div>
+    <h2>Ending your use</h2>
+    <p>You can stop using Word Explorer at any time by uninstalling it. We may suspend or end your ability to use the app if you seriously breach these terms — for example, by cheating or attempting to disrupt the game for others.</p>
+  </section>
+
+  <section id="changes-terms">
+    <div class="divider"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg><div class="line"></div></div>
+    <h2>Changes to these terms</h2>
+    <p>We may update these terms from time to time. If we do, we'll update the "Effective" date at the top of this page. Continuing to play after an update means you accept the revised terms.</p>
+  </section>
+
+  <div class="contact-block" id="contact">
+    <h2>Contact us</h2>
+    <p>Questions about these terms:</p>
+    <p><a href="mailto:nkbussines99@gmail.com">nkbussines99@gmail.com</a></p>
+    <p>FSD Studio — developer of Word Explorer</p>
+  </div>
+
+</main>
+
+<footer>
+  <p>Word Explorer by FSD Studio · <a href="privacy-policy.html">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
